@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/providers/cart.dart';
-import 'package:shop_app/providers/products.dart';
-import 'package:shop_app/widgets/app_drawer.dart';
+import '../widgets/app_drawer.dart';
 
 import '../widgets/products_grid.dart';
 import '../providers/products.dart';
@@ -39,15 +38,15 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
                   }
                 });
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.more_vert,
               ),
               itemBuilder: (_) => [
-                PopupMenuItem(
+                const PopupMenuItem(
                   child: Text('Only Favorites'),
                   value: FilterOptions.Favorites,
                 ),
-                PopupMenuItem(
+                const PopupMenuItem(
                   child: Text('Show All'),
                   value: FilterOptions.All,
                 ),
